@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Redirecting...</title>
+	<meta http-equiv = "refresh" content = "2.5; url = Main.html" />
+</head>
+<body>
+    <h1 id="text" style="font-size: 100px; text-align:center; margin-top:300px;">Redirecting</h1>
+    
+    <script>
+        var textElement = document.getElementById('text');
+        var textArray = ['Redirecting', 'Redirecting.', 'Redirecting..', 'Redirecting...'];
+        var currentIndex = 0;
+
+        function updateText() {
+            textElement.innerHTML = textArray[currentIndex];
+            currentIndex = (currentIndex + 1) % textArray.length;
+        }
+		if (currentIndex != 2){
+			setInterval(updateText, 500);
+		}
+    </script>
+</body>
+</html>
